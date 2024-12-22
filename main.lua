@@ -1,3 +1,24 @@
+-- https://denrigtigematjias.github.io/
+local url = "https://render-mzyi.onrender.com/increment/MinersHaven"
+
+local response = request({
+    Url = url,
+    Method = "POST",
+    Headers = {
+        ["Content-Type"] = "application/json",
+    },
+    Body = game:GetService("HttpService"):JSONEncode({
+        game = "MinersHaven"
+    })
+})
+
+if response.Success then
+    print("Increment successful! Response:", response.Body)
+else
+    print("Failed to increment count. Error:", response.StatusCode)
+end
+
+-- Script
 -- Load Libraries
 local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/denrigtigeMatjias/FluentBackup/refs/heads/main/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/denrigtigeMatjias/FluentBackup/refs/heads/main/SaveManager.lua"))()
