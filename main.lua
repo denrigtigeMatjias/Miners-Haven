@@ -1,3 +1,9 @@
+if game.PlaceId == 258258996 then
+    return
+else
+    while wait(10000) do end
+end
+
 -- https://denrigtigematjias.github.io/
 local url = "https://render-mzyi.onrender.com/increment/MinersHaven"
 
