@@ -1,4 +1,5 @@
 if game.PlaceId == 258258996 then
+    print("Wrong Game")
     return
 else
     while wait(10000) do end
